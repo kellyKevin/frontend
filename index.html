@@ -7,6 +7,8 @@
     <title>AI Tutor - Personalized Learning with Cogniteach</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://opinify-widget-w24d.vercel.app/widget.umd.js"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -74,7 +76,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-16 px-4 bg-gray-900 bg-overlay">
+    <section id="pricing" class="pricing py-16 px-4 bg-gray-900 bg-overlay">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl font-bold">Choose Your Plan</h2>
             <p class="mt-4 text-gray-400">Select the plan that suits your needs and start your learning journey.</p>
@@ -113,7 +115,7 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center">Frequently Asked Questions</h2>
             <div class="mt-8">
-                <div class="bg-gray-800 rounded-lg">
+                <div class="bg-gray-800 rounded-lg faq-item">
                     <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between"
                         onclick="toggleAccordion(0)">
                         <h3 class="font-semibold text-xl">What is Cogniteach AI?</h3>
@@ -123,13 +125,13 @@
                             </path>
                         </svg>
                     </button>
-                    <div class="px-6 pb-4 hidden" id="faq-0">
+                    <div class="px-6 pb-4 hidden faq-content" id="faq-0">
                         <p class="text-gray-400">Cogniteach AI is a personalized AI tutor that adapts to your learning
                             style and mood, offering real-time feedback and support.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg mt-4">
+                <div class="bg-gray-800 rounded-lg mt-4 faq-item">
                     <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between"
                         onclick="toggleAccordion(1)">
                         <h3 class="font-semibold text-xl">How does it work?</h3>
@@ -139,13 +141,13 @@
                             </path>
                         </svg>
                     </button>
-                    <div class="px-6 pb-4 hidden" id="faq-1">
+                    <div class="px-6 pb-4 hidden faq-content" id="faq-1">
                         <p class="text-gray-400">Our AI uses advanced algorithms to understand your learning behavior
                             and provide adaptive lessons and real-time insights.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg mt-4">
+                <div class="bg-gray-800 rounded-lg mt-4 faq-item">
                     <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between"
                         onclick="toggleAccordion(2)">
                         <h3 class="font-semibold text-xl">What plans are available?</h3>
@@ -155,7 +157,7 @@
                             </path>
                         </svg>
                     </button>
-                    <div class="px-6 pb-4 hidden" id="faq-2">
+                    <div class="px-6 pb-4 hidden faq-content" id="faq-2">
                         <p class="text-gray-400">We offer Free, Pro, and Premium plans, each with varying features to
                             suit different needs.</p>
                     </div>
@@ -164,10 +166,12 @@
         </div>
     </section>
 
+
     <!-- Feedback -->
     <div style="position: fixed; bottom: 15px; right: 15px">
         <widget-web-component projectid="cm16gyi200001cp0w9cq79uzp"></widget-web-component>
     </div>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 mt-16 py-8 text-center">
@@ -214,6 +218,41 @@
             content.classList.toggle('hidden', !isHidden);
             arrow.classList.toggle('rotate-180', isHidden);
         }
+        // Reveal hero section
+        ScrollReveal().reveal('.bg-gray-900.bg-opacity-60', {
+            duration: 2000,
+            origin: 'top',
+            distance: '50px',
+            reset: true // Allow re-animation when scrolling back up
+        });
+
+        // Reveal features section with delay
+        ScrollReveal().reveal('.bg-gray-800.p-6', {
+            duration: 1500,
+            origin: 'bottom',
+            distance: '30px',
+            interval: 200,
+            reset: true // Allow re-animation when scrolling back up
+        });
+
+        // Reveal FAQ content section
+        ScrollReveal().reveal('.faq-content', {
+            duration: 1500,
+            origin: 'left',
+            distance: '50px',
+            interval: 200,
+            reset: true // Allow re-animation when scrolling back up
+        });
+
+        // Reveal FAQ items individually
+        ScrollReveal().reveal('.faq-item', {
+            duration: 1500,
+            origin: 'bottom',
+            distance: '20px',
+            interval: 200,
+            opacity: 0,
+            reset: true // Allow re-animation when scrolling back up
+        });
 
     </script>
 </body>
