@@ -4,242 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cogniteach - Empowering Learning with AI</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #f39c12;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-        }
-
-        body {
-            /* font-family: 'Arial', sans-serif; */
-            font-family: var(--font-inter),ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .navbar {
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar-scrolled {
-            background-color: #fff !important;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 0;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: #3a7bd5;
-            border-color: #3a7bd5;
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .pricing-card {
-            border: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 25px rgba(0, 0, 0, .1);
-        }
-
-        .pricing-card.highlight {
-            border: 2px solid var(--primary-color);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    <title>AI Tutor - Personalized Learning with Cogniteach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">Cogniteach</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary ms-2" href="#signup">Sign Up</a>
-                    </li>
-                </ul>
-            </div>
+<body class="bg-gray-900 text-white">
+    <!-- Your Navbar (unchanged) -->
+    <nav id="navbar"
+        class="sticky top-4 z-50 max-w-2xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-md rounded-full mt-8 transition-all duration-300">
+        <div class="flex items-center space-x-2">
+            <span class="font-bold text-xl">Cogniteach</span>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <div id="menu"
+            class="hidden md:flex flex-col md:flex-row items-center space-x-0 md:space-x-8 w-full md:w-auto mt-4 md:mt-0 rounded-none ml-auto">
+            <a href="#" class="text-white hover:text-gray-400 block py-2">Features</a>
+            <a href="#" class="text-white hover:text-gray-400 block py-2">Pricing</a>
+            <a href="#" class="text-white hover:text-gray-400 block py-2">Contact</a>
+            <a href="signin.html"
+                class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700">Get
+                started free</a>
+            <a href="signin.html" class="text-white hover:text-gray-400">Sign in</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-4" data-aos="fade-up">Empowering Learning with AI</h1>
-            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Experience personalized education like never
-                before with Cogniteach's AI-driven platform.</p>
-            <a href="#signup" class="btn btn-light btn-lg" data-aos="fade-up" data-aos-delay="200">Try Cogniteach
-                Now</a>
+    <!-- Main Hero Section replicated from Subbb.me -->
+    <section class="flex flex-col items-center justify-center h-screen text-center bg-cover bg-center"
+        style="background-image: url('your-image-url.jpg');">
+        <div class="bg-gray-900 bg-opacity-60 px-8 py-16 rounded-xl">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight">Discover AI-Powered Learning</h1>
+            <p class="mt-4 text-gray-400">Unleash your potential with tailored AI lessons. Start your journey today.</p>
+            <br>
+            <a href="#pricing"
+                class="mt-8 px-6 py-3 bg-blue-600 rounded-full text-white font-semibold hover:bg-blue-700">Start Free
+                Trial</a>
         </div>
-    </header>
+    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Key Features</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="text-center">
-                        <i class="fas fa-brain feature-icon"></i>
-                        <h3>AI-Driven Tutoring</h3>
-                        <p>Personalized learning experiences tailored to each student's needs.</p>
-                    </div>
+    <!-- Section: What AI Can Do (like features on Subbb.me) -->
+    <section class="py-16 px-4 bg-gray-900 bg-overlay">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold">What Our AI Tutor Can Do</h2>
+            <p class="mt-4 text-gray-400">Explore the intelligent features that make learning with AI more efficient and
+                fun.</p>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold">Real-Time Feedback</h3>
+                    <p class="mt-4 text-gray-400">Receive immediate, actionable feedback on your work, just like a tutor
+                        would.</p>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center">
-                        <i class="fas fa-chart-line feature-icon"></i>
-                        <h3>Performance Analytics</h3>
-                        <p>Comprehensive insights into student progress and areas for improvement.</p>
-                    </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold">Personalized Learning</h3>
+                    <p class="mt-4 text-gray-400">AI adapts to your learning style to optimize each lesson for you.</p>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-center">
-                        <i class="fas fa-book-reader feature-icon"></i>
-                        <h3>Flexible Learning</h3>
-                        <p>Access course materials anytime, anywhere, on any device.</p>
-                    </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-semibold">Emotional Support</h3>
+                    <p class="mt-4 text-gray-400">Our AI understands when you're stressed and provides encouragement.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Pricing Plans</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="card pricing-card h-100">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Free</h3>
-                            <h4 class="card-subtitle mb-2 text-muted">$0/month</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Basic AI tutoring</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Limited analytics</li>
-                                <li><i class="fas fa-check text-success me-2"></i>5 courses</li>
-                            </ul>
-                            <a href="#signup" class="btn btn-outline-primary">Sign Up</a>
-                        </div>
+    <section id="pricing" class="py-16 px-4 bg-gray-900 bg-overlay">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold">Choose Your Plan</h2>
+            <p class="mt-4 text-gray-400">Select the plan that suits your needs and start your learning journey.</p>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-2xl font-semibold">Free</h3>
+                    <p class="mt-4 text-gray-400">$0/month</p>
+                    <p class="mt-4 text-gray-400">Basic features to get started with AI tutoring.</p>
+                    <a href="signup.html"
+                        class="mt-8 px-6 py-3 bg-blue-600 rounded-full text-white font-semibold hover:bg-blue-700 block">Sign
+                        Up Now</a>
+                </div>
+                <div class="bg-blue-600 p-6 rounded-lg text-center">
+                    <h3 class="text-2xl font-semibold">Pro</h3>
+                    <p class="mt-4 text-gray-200">$19/month</p>
+                    <p class="mt-4 text-gray-200">Advanced features and personalized coaching.</p>
+                    <a href="signup.html"
+                        class="mt-8 px-6 py-3 bg-gray-800 rounded-full text-white font-semibold hover:bg-gray-900 block">Sign
+                        Up Now</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-2xl font-semibold">Premium</h3>
+                    <p class="mt-4 text-gray-400">$49/month</p>
+                    <p class="mt-4 text-gray-400">Complete access with priority support and extra features.</p>
+                    <a href="signup.html"
+                        class="mt-8 px-6 py-3 bg-blue-600 rounded-full text-white font-semibold hover:bg-blue-700 block">Sign
+                        Up Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-16 px-4 bg-gray-900 bg-overlay">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center">Frequently Asked Questions</h2>
+            <div class="mt-8">
+                <div class="bg-gray-800 rounded-lg">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between"
+                        onclick="toggleAccordion(0)">
+                        <h3 class="font-semibold text-xl">What is Cogniteach AI?</h3>
+                        <svg class="w-5 h-5 transform rotate-0 transition-transform duration-300" id="arrow-0"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="px-6 pb-4 hidden" id="faq-0">
+                        <p class="text-gray-400">Cogniteach AI is a personalized AI tutor that adapts to your learning
+                            style and mood, offering real-time feedback and support.</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card pricing-card h-100 highlight">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Pro</h3>
-                            <h4 class="card-subtitle mb-2 text-muted">$29/month</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Advanced AI tutoring</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Full analytics</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Unlimited courses</li>
-                            </ul>
-                            <a href="#signup" class="btn btn-primary">Sign Up</a>
-                        </div>
+
+                <div class="bg-gray-800 rounded-lg mt-4">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between"
+                        onclick="toggleAccordion(1)">
+                        <h3 class="font-semibold text-xl">How does it work?</h3>
+                        <svg class="w-5 h-5 transform rotate-0 transition-transform duration-300" id="arrow-1"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="px-6 pb-4 hidden" id="faq-1">
+                        <p class="text-gray-400">Our AI uses advanced algorithms to understand your learning behavior
+                            and provide adaptive lessons and real-time insights.</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card pricing-card h-100">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Premium</h3>
-                            <h4 class="card-subtitle mb-2 text-muted">$99/month</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Premium AI tutoring</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Advanced analytics</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Unlimited courses</li>
-                                <li><i class="fas fa-check text-success me-2"></i>24/7 support</li>
-                            </ul>
-                            <a href="#signup" class="btn btn-outline-primary">Sign Up</a>
-                        </div>
+
+                <div class="bg-gray-800 rounded-lg mt-4">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none flex items-center justify-between"
+                        onclick="toggleAccordion(2)">
+                        <h3 class="font-semibold text-xl">What plans are available?</h3>
+                        <svg class="w-5 h-5 transform rotate-0 transition-transform duration-300" id="arrow-2"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="px-6 pb-4 hidden" id="faq-2">
+                        <p class="text-gray-400">We offer Free, Pro, and Premium plans, each with varying features to
+                            suit different needs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Footer -->
-    <footer class="py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5>Cogniteach</h5>
-                    <p class="mb-0">Empowering Learning with AI</p>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Terms of Service</a></li>
-                        <li><a href="#" class="text-white">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Connect</h5>
-                    <div class="d-flex">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-4 mb-3">
-            <p class="text-center mb-0">&copy; 2024 Cogniteach. All rights reserved.</p>
+    <footer class="bg-gray-800 mt-16 py-8 text-center">
+        <div class="text-gray-400">
+            <a href="#" class="hover:underline">Terms of Service</a> |
+            <a href="#" class="hover:underline">Privacy Policy</a> |
+            <a href="#" class="hover:underline">Support</a>
+        </div>
+        <div class="mt-4">
+            <p class="text-sm">&copy; 2024 Cogniteach AI. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- JavaScript to toggle the menu and FAQ accordion -->
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            navbar.classList.toggle('bg-gray-800');
+            navbar.classList.toggle('bg-transparent');
         });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                document.querySelector('.navbar').classList.add('navbar-scrolled');
-            } else {
-                document.querySelector('.navbar').classList.remove('navbar-scrolled');
-            }
-        });
+        function toggleAccordion(index) {
+            const content = document.getElementById(`faq-${index}`);
+            const isHidden = content.classList.contains('hidden');
+            document.querySelectorAll('.faq-content').forEach(div => div.classList.add('hidden'));
+            content.classList.toggle('hidden', !isHidden);
+        }
+
+        function toggleAccordion(index) {
+            const content = document.getElementById(`faq-${index}`);
+            const arrow = document.getElementById(`arrow-${index}`);
+            const isHidden = content.classList.contains('hidden');
+
+            // Hide all content and reset all arrows
+            document.querySelectorAll('.faq-content').forEach(div => div.classList.add('hidden'));
+            document.querySelectorAll('svg').forEach(icon => icon.classList.remove('rotate-180'));
+
+            // Toggle current content and arrow
+            content.classList.toggle('hidden', !isHidden);
+            arrow.classList.toggle('rotate-180', isHidden);
+        }
+
     </script>
+</body>
+
+</html>
