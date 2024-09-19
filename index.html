@@ -38,6 +38,15 @@
             max-width: 800px;
             /* Adjust as needed */
         }
+
+        .card {
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(17, 25, 40, 0.75);
+            /* Make sure the background has some transparency */
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+        }
     </style>
 
 </head>
@@ -152,7 +161,7 @@
             <p class="mt-4 text-gray-400">Select the plan that suits your needs and start your learning journey.</p>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Free Plan -->
-                <div class="bg-gray-800 p-6 rounded-lg text-center min-h-[400px] flex flex-col justify-between">
+                <div class="bg-gray-800 p-6 rounded-lg text-center min-h-[400px] flex flex-col justify-between card">
                     <h3 class="text-2xl font-semibold">Free</h3>
                     <p class="mt-4 text-gray-400 text-xl">$0/month</p>
                     <p class="mt-4 text-gray-400">Basic features to get started with AI tutoring.</p>
@@ -166,7 +175,7 @@
                         Up Now</a>
                 </div>
                 <!-- Pro Plan -->
-                <div class="bg-blue-600 p-6 rounded-lg text-center min-h-[400px] flex flex-col justify-between">
+                <div class="bg-blue-600 p-6 rounded-lg text-center min-h-[400px] flex flex-col justify-between card">
                     <h3 class="text-2xl font-semibold text-gray-200">Pro</h3>
                     <p class="mt-4 text-gray-200 text-xl">$19/month</p>
                     <p class="mt-4 text-gray-200">Advanced features and personalized coaching.</p>
@@ -181,7 +190,7 @@
                         Up Now</a>
                 </div>
                 <!-- Premium Plan -->
-                <div class="bg-gray-800 p-6 rounded-lg text-center min-h-[400px] flex flex-col justify-between">
+                <div class="bg-gray-800 p-6 rounded-lg text-center min-h-[400px] flex flex-col justify-between card">
                     <h3 class="text-2xl font-semibold">Premium</h3>
                     <p class="mt-4 text-gray-400 text-xl">$49/month</p>
                     <p class="mt-4 text-gray-400">Complete access with priority support and extra features.</p>
