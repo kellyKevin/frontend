@@ -8,14 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .custom-width {
-            width: 400px; /* Define the same width for both forms */
+            width: 400px;
+            /* Define the same width for both forms */
         }
     </style>
 </head>
 
 <body class="bg-gray-900 text-white">
     <section class="flex items-center justify-center min-h-screen">
-        <div class="flex bg-gray-800 items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-8 shadow-md rounded-lg custom-width">
+        <div
+            class="flex bg-gray-800 items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-8 shadow-md rounded-lg custom-width">
             <div class="xl:mx-auto xl:w-full p-4">
                 <div class="mb-2 flex justify-center"></div>
                 <h2 class="text-center text-2xl font-bold leading-tight">
@@ -29,10 +31,10 @@
                     <div class="space-y-5">
                         <div>
                             <label class="text-base font-medium">
-                                Full Name
+                                Username
                             </label>
                             <div class="mt-2">
-                                <input placeholder="Full Name" type="text"
+                                <input placeholder="Username" type="text"
                                     class="flex h-10 w-full rounded-md border border-gray-600 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" />
                             </div>
                         </div>
@@ -54,12 +56,24 @@
                                     class="flex h-10 w-full rounded-md border border-gray-600 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" />
                             </div>
                         </div>
+                        <!-- Re-enter Password Field -->
                         <div>
-                            <button
-                                class="inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold leading-7 hover:bg-blue-700"
-                                type="button">
-                                Sign Up
-                            </button>
+                            <label class="text-base font-medium">
+                                Re-enter Password
+                            </label>
+                            <div class="mt-2">
+                                <input placeholder="Re-enter Password" type="password"
+                                    class="flex h-10 w-full rounded-md border border-gray-600 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" />
+                            </div>
+                        </div>
+                        <div>
+                            <a href="postSignUp.html">
+                                <button
+                                    class="inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold leading-7 hover:bg-blue-700"
+                                    type="button">
+                                    Next
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </form>
