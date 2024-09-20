@@ -397,19 +397,13 @@
 
     <!-- JavaScript for Menu and FAQ Accordion -->
     <script>
-        const typewriter = (element, text, speed, delay) => {
+        const typewriter = (element, text, speed) => {
             let i = 0;
             const typingEffect = () => {
                 if (i < text.length) {
                     element.innerHTML += text.charAt(i);
                     i++;
                     setTimeout(typingEffect, speed);
-                } else {
-                    setTimeout(() => {
-                        element.innerHTML = ""; // Clear the text
-                        i = 0; // Reset the index
-                        setTimeout(typingEffect, delay); // Restart after a delay
-                    }, delay);
                 }
             };
             typingEffect();
@@ -451,16 +445,14 @@
         ScrollReveal().reveal('.bg-gray-900.bg-opacity-60', {
             duration: 2000,
             origin: 'top',
-            distance: '50px',
-            reset: true
+            distance: '50px'
         });
 
         ScrollReveal().reveal('.bg-gray-800.p-6', {
             duration: 1500,
             origin: 'bottom',
             distance: '30px',
-            interval: 200,
-            reset: true
+            interval: 200
         });
 
         ScrollReveal().reveal('.bg-gray-800 > button', {
@@ -468,8 +460,7 @@
             origin: 'bottom',
             distance: '20px',
             interval: 200,
-            opacity: 0,
-            reset: true
+            opacity: 0
         });
     </script>
 </body>
