@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings - Cogniteach</title>
+    <title>New Course</title>
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -57,6 +57,61 @@
             .content {
                 margin-left: 0;
             }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .bg-gradient-to-br {
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .group:focus-within label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #818cf8;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .bg-gradient-to-br {
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .group:focus-within label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #818cf8;
+        }
+
+        /* New styles for select options */
+        #ai-model option {
+            white-space: pre-wrap;
+            padding: 10px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -250,90 +305,31 @@
                             </div>
 
                             <!-- Submit button -->
-                            <div class="pt-6">
-                                <button type="submit"
-                                    class="w-full py-4 px-6 text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 rounded-xl text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg hover:shadow-xl">
-                                    Save Course Setup
-                                </button>
+                            <div class="flex justify-center w-full">
+                                <a href="questions.html" class="w-full">
+                                    <button type="button"
+                                        class="w-full py-4 px-6 text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 rounded-xl text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg hover:shadow-xl">
+                                        Proceed to Questions
+                                    </button>
+                                </a>
                             </div>
                         </form>
-
-
                     </div>
                 </div>
             </main>
-            <style>
-                @keyframes gradient {
-                    0% {
-                        background-position: 0% 50%;
-                    }
-
-                    50% {
-                        background-position: 100% 50%;
-                    }
-
-                    100% {
-                        background-position: 0% 50%;
-                    }
-                }
-
-                .bg-gradient-to-br {
-                    background-size: 200% 200%;
-                    animation: gradient 15s ease infinite;
-                }
-
-                .group:focus-within label {
-                    transform: translateY(-1.5rem) scale(0.85);
-                    color: #818cf8;
-                }
-
-                @keyframes gradient {
-                    0% {
-                        background-position: 0% 50%;
-                    }
-
-                    50% {
-                        background-position: 100% 50%;
-                    }
-
-                    100% {
-                        background-position: 0% 50%;
-                    }
-                }
-
-                .bg-gradient-to-br {
-                    background-size: 200% 200%;
-                    animation: gradient 15s ease infinite;
-                }
-
-                .group:focus-within label {
-                    transform: translateY(-1.5rem) scale(0.85);
-                    color: #818cf8;
-                }
-
-                /* New styles for select options */
-                #ai-model option {
-                    white-space: pre-wrap;
-                    padding: 10px;
-                    font-size: 14px;
-                }
-            </style>
-
-            <script>
-                document.querySelectorAll('input, textarea, select').forEach(element => {
-                    element.addEventListener('focus', () => {
-                        element.closest('.group').querySelector('label').classList.add('text-indigo-400', '-translate-y-6');
-                    });
-                    element.addEventListener('blur', () => {
-                        if (element.value === '') {
-                            element.closest('.group').querySelector('label').classList.remove('text-indigo-400', '-translate-y-6');
-                        }
-                    });
-                });
-            </script>
         </div>
     </div>
     <script>
+        document.querySelectorAll('input, textarea, select').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.closest('.group').querySelector('label').classList.add('text-indigo-400', '-translate-y-6');
+            });
+            element.addEventListener('blur', () => {
+                if (element.value === '') {
+                    element.closest('.group').querySelector('label').classList.remove('text-indigo-400', '-translate-y-6');
+                }
+            });
+        });
         const profilePic = document.getElementById('profile-pic');
         const profileDropdown = document.getElementById('profile-dropdown');
         const menuToggle = document.getElementById('menu-toggle');
@@ -341,10 +337,6 @@
 
         profilePic.addEventListener('click', () => {
             profileDropdown.classList.toggle('hidden');
-        });
-
-        menuToggle.addEventListener('click', () => {
-            menuItems.classList.toggle('hidden');
         });
 
         document.addEventListener('click', (event) => {
