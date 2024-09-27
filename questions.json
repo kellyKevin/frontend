@@ -16,5 +16,122 @@
             "Venus",
             "Saturn"
         ]
+    },
+    {
+        "text": "What is the largest ocean on Earth?",
+        "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+        ]
+    },
+    {
+        "text": "Which element has the chemical symbol 'O'?",
+        "options": [
+            "Gold",
+            "Oxygen",
+            "Osmium",
+            "Hydrogen"
+        ]
+    },
+    {
+        "text": "Who wrote 'Romeo and Juliet'?",
+        "options": [
+            "Mark Twain",
+            "Charles Dickens",
+            "William Shakespeare",
+            "Ernest Hemingway"
+        ]
+    },
+    {
+        "text": "What is the smallest planet in our solar system?",
+        "options": [
+            "Mars",
+            "Earth",
+            "Mercury",
+            "Venus"
+        ]
+    },
+    {
+        "text": "Which country is known as the Land of the Rising Sun?",
+        "options": [
+            "China",
+            "Japan",
+            "Thailand",
+            "South Korea"
+        ]
+    },
+    {
+        "text": "What is the boiling point of water?",
+        "options": [
+            "100 degrees Celsius",
+            "0 degrees Celsius",
+            "50 degrees Celsius",
+            "200 degrees Celsius"
+        ]
+    },
+    {
+        "text": "What is the largest mammal in the world?",
+        "options": [
+            "Elephant",
+            "Blue Whale",
+            "Giraffe",
+            "Great White Shark"
+        ]
+    },
+    {
+        "text": "In which year did the Titanic sink?",
+        "options": [
+            "1905",
+            "1912",
+            "1920",
+            "1898"
+        ]
+    },
+    {
+        "text": "Which gas is most abundant in the Earth's atmosphere?",
+        "options": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Hydrogen"
+        ]
+    },
+    {
+        "text": "What is the capital of Australia?",
+        "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+        ]
+    },
+    {
+        "text": "Who painted the Mona Lisa?",
+        "options": [
+            "Vincent van Gogh",
+            "Pablo Picasso",
+            "Leonardo da Vinci",
+            "Claude Monet"
+        ]
+    },
+    {
+        "text": "What is the currency of Japan?",
+        "options": [
+            "Yuan",
+            "Won",
+            "Yen",
+            "Dollar"
+        ]
+    },
+    {
+        "text": "Which organ is responsible for pumping blood throughout the body?",
+        "options": [
+            "Liver",
+            "Lung",
+            "Heart",
+            "Kidney"
+        ]
     }
 ]
