@@ -52,7 +52,7 @@
 
         .title {
             font-family: 'Poppins', sans-serif;
-            font-size: 100px;
+            font-size: 40px;
             background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -94,28 +94,49 @@
         </div>
     </nav>
 
-    <!-- Main Hero Section -->
-    <section class="flex flex-col items-center justify-center h-screen text-center bg-cover bg-center pb-24"
-        style="background-image: url('your-image-url.jpg');">
-        <div class="bg-gray-900 bg-opacity-60 px-8 py-16 rounded-xl">
-            <h1 class="text-4xl md:text-5xl font-bold leading-tight title">
-                <span class="typewriter-text"></span>
-            </h1>
-            <p class="mt-4 text-gray-400">Unleash your potential with tailored AI lessons. Start your journey today.</p>
-            <br>
-            <a href="#pricing"
-                class="mt-8 px-6 py-3 bg-blue-600 rounded-full text-white font-semibold hover:bg-blue-700">Start Free
-                Trial</a>
+    <!-- Full-width Hero Section with Increased Height -->
+    <section class="flex justify-center items-center w-full">
+        <div class="w-full max-w-7xl py-40 sm:px-6 sm:py-54 lg:px-0"> <!-- Increased padding for height -->
+            <div
+                class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-32 lg:flex lg:gap-x-20 lg:px-32 lg:pt-0">
+                
+                <svg viewBox="0 0 1024 1024"
+                    class="absolute left-1/2 top-1/2 -z-10 h-[72rem] w-[72rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                    aria-hidden="true">
+                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                        fill-opacity="0.7" />
+                    <defs>
+                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                            <stop stop-color="#7775D6" />
+                            <stop offset="1" stop-color="#E935C1" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+                <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-48 lg:text-left">
+                    <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl font-bold leading-tight">
+                        <span class="typewriter-text title"></span>
+                    </h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">Unleash your potential with tailored AI lessons.
+                        Start your journey today.</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                        <a href="#"
+                            class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                            Get started
+                        </a>
+                        <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+                <div class="relative mt-16 h-[40rem] lg:mt-8">
+                    <img class="absolute left-0 top-20 w-[64rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                        src="dashboard_pic.jpg" alt="App screenshot" width="1824" height="1080">
+                </div>
+            </div>
+
         </div>
-        <!-- Wave Background SVG
-        <div class="absolute bottom-0 left-0 w-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#E5E7EB" fill-opacity="1"
-                    d="M0,128L40,149.3C80,171,160,213,240,229.3C320,245,400,235,480,234.7C560,235,640,245,720,224C800,203,880,149,960,106.7C1040,64,1120,32,1200,48C1280,64,1360,128,1400,160L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
-                </path>
-            </svg>
-        </div> -->
     </section>
+
+
 
     <!-- Features Section -->
     <hr id="features" class="section-divider">
