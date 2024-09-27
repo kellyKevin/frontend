@@ -36,6 +36,11 @@
             background-color: #4a5568;
         }
 
+        .menu-item.active {
+            background-color: #4a5568;
+            /* Highlight color for active item */
+        }
+
         @media (max-width: 768px) {
             #side-menu {
                 width: 100%;
@@ -66,7 +71,7 @@
             </div>
             <ul id="menu-items" class="hidden md:block space-y-4">
                 <li>
-                    <a href="#" class="flex items-center py-2 px-4 rounded-lg menu-item">
+                    <a href="#" class="flex items-center py-2 px-4 rounded-lg menu-item active">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -75,6 +80,7 @@
                         Home
                     </a>
                 </li>
+
                 <li>
                     <a href="#" class="flex items-center py-2 px-4 rounded-lg menu-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
