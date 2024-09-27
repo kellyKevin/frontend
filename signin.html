@@ -8,59 +8,60 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white"> 
+<body class="bg-gray-900 text-white">
     <section class="flex items-center justify-center min-h-screen">
-        <div class="flex bg-gray-800 items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-8 shadow-md rounded-lg"> 
+        <div
+            class="flex bg-gray-800 items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-8 shadow-md rounded-lg">
             <div class="xl:mx-auto xl:w-full p-4 xl:max-w-sm 2xl:max-w-md">
                 <div class="mb-2 flex justify-center"></div>
                 <h2 class="text-center text-2xl font-bold leading-tight">
                     Sign in to your account
                 </h2>
-                <p class="mt-2 text-center text-sm text-gray-400"> 
+                <p class="mt-2 text-center text-sm text-gray-400">
                     Don't have an account? <a href="signup.html"
-                    class="font-semibold text-blue-500 hover:underline">Sign Up</a>
+                        class="font-semibold text-blue-500 hover:underline">Sign Up</a>
                 </p>
-                <form class="mt-8" method="POST" action="#">
-                    <div class="space-y-5">
-                        <div>
-                            <label class="text-base font-medium"> 
-                                Email address
-                            </label>
-                            <div class="mt-2">
-                                <input placeholder="Email" type="email"
-                                       class="flex h-10 w-full rounded-md border border-gray-600 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <label class="text-base font-medium">
-                                    Password
-                                </label>
-                                <a class="text-sm font-semibold hover:underline" title="" href="#">
-                                    Forgot password?
-                                </a>
-                            </div>
-                            <div class="mt-2">
-                                <input placeholder="Password" type="password"
-                                       class="flex h-10 w-full rounded-md border border-gray-600 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" />
-                            </div>
-                        </div>
-                        <div>
-                            <button
-                                class="inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold leading-7 hover:bg-blue-700"
-                                type="button">
-                                Sign In
-                            </button>
+                <!-- <form class="mt-8" method="POST" action="#"> -->
+                <div class="space-y-5">
+                    <div>
+                        <label class="text-base font-medium">
+                            Email address
+                        </label>
+                        <div class="mt-2">
+                            <input placeholder="Email" type="email"
+                                class="flex h-10 w-full rounded-md border border-gray-600 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" />
                         </div>
                     </div>
-                </form>
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label class="text-base font-medium">
+                                Password
+                            </label>
+                            <a class="text-sm font-semibold hover:underline" title="" href="#">
+                                Forgot password?
+                            </a>
+                        </div>
+                        <div class="mt-2">
+                            <input placeholder="Password" type="password"
+                                class="flex h-10 w-full rounded-md border border-gray-600 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" />
+                        </div>
+                    </div>
+                    <div>
+                        <button
+                            class="inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-3.5 py-2.5 font-semibold leading-7 hover:bg-blue-700"
+                            type="button">
+                            Sign In
+                        </button>
+                    </div>
+                </div>
+                <!-- </form> -->
                 <div class="mt-3 space-y-3">
                     <button
                         class="relative inline-flex w-full items-center justify-center rounded-md border border-gray-600 bg-transparent px-3.5 py-2.5 font-semibold text-gray-300 transition-all duration-200 hover:bg-gray-700 hover:text-white focus:bg-gray-100 focus:text-black focus:outline-none"
                         type="button">
                         <span class="mr-2 inline-block">
                             <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                 class="h-6 w-6 text-rose-500">
+                                class="h-6 w-6 text-rose-500">
                                 <path
                                     d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.908 8.908 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625z">
                                 </path>
