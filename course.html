@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Cogniteach</title>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+        }
+
+        .gradient-text {
+            background-image: linear-gradient(45deg, #4158d0, #c850c0, #ffcc70);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card {
+            transition: all 0.3s ease;
+            background-color: #1e293b;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item:hover {
+            background-color: #2c3e50;
+        }
+
+        .custom-input {
+            background-color: #2c3e50;
+            border: 1px solid #4a5568;
+            color: #fff;
+        }
+
+        .custom-input:focus {
+            border-color: #4158d0;
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            #side-menu {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <div class="flex flex-col md:flex-row">
+        <nav id="side-menu" class="bg-gray-800 w-full md:w-64 md:h-screen md:fixed left-0 top-0 p-6">
+            <div class="flex items-center justify-between md:justify-start mb-8">
+                <h2 class="text-2xl font-bold gradient-text">Cogniteach</h2>
+                <button id="menu-toggle" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <ul id="menu-items" class="hidden md:block space-y-4">
+                <li>
+                    <a href="dashboard.html" class="flex items-center py-2 px-4 rounded-lg menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex items-center py-2 px-4 rounded-lg menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                        </svg>
+                        Bookmarks
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center py-2 px-4 rounded-lg menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Questions
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="flex items-center py-2 px-4 rounded-lg menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-5 w-5 mr-3">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex-1 md:ml-64 p-8">
+            <header class="bg-gray-800 p-6 rounded-xl mb-8 shadow-lg">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <h1 class="text-3xl font-bold gradient-text">Course Setup</h1>
+                        <p class="text-gray-400 mt-2">Ready to dive into course?</p>
+                    </div>
+                    <div class="relative">
+                        <button id="profile-pic"
+                            class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-xl font-bold cursor-pointer focus:outline-none">
+                            KQ
+                        </button>
+                        <div id="profile-dropdown"
+                            class="absolute right-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg hidden">
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-6 w-6 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                                Profile
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-6 w-6 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                </svg>
+                                Logout
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <main class="max-w-6xl mx-auto px-4 py-12">
+                <div
+                    class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
+                    <div class="p-8 md:p-12">
+                        <h2
+                            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-8">
+                            Course Setup</h2>
+                        <form class="space-y-10">
+                            <!-- AI Model section: Full row -->
+                            <div class="relative group">
+                                <label for="ai-model"
+                                    class="block text-sm font-medium text-gray-300 mb-2 transition-transform group-focus-within:-translate-y-6 group-focus-within:text-indigo-400">
+                                    AI Model
+                                </label>
+                                <select id="ai-model" name="ai-model"
+                                    class="w-full px-5 py-4 rounded-xl bg-gray-800 text-white border-2 border-gray-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-300 ease-in-out transform focus:scale-105">
+                                    <option value="">Select an AI Model</option>
+                                    <option value="aiko">AIKO - For students who need emotional support, particularly
+                                        those who might be anxious or sensitive</option>
+                                    <option value="amara">Amara - For students who thrive in a competitive,
+                                        goal-oriented environment and need a little extra push</option>
+                                    <option value="diego">Diego - For advanced learners or those who enjoy critical
+                                        thinking and problem-solving challenges</option>
+                                    <option value="elara">Elara - For students who appreciate context, background, and
+                                        the practical application of knowledge</option>
+                                    <option value="lena">Lena - For students who prefer a creative, hands-on approach to
+                                        learning and enjoy exploring different ways to solve problems</option>
+                                </select>
+                            </div>
+
+                            <!-- Rest of the form fields in two-column layout -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                                <div class="space-y-8">
+                                    <div class="relative group">
+                                        <label for="topic-name"
+                                            class="block text-sm font-medium text-gray-300 mb-2 transition-transform group-focus-within:-translate-y-6 group-focus-within:text-indigo-400">
+                                            Topic Name
+                                        </label>
+                                        <input type="text" name="topic-name" id="topic-name"
+                                            class="w-full px-5 py-4 rounded-xl bg-gray-800 text-white border-2 border-gray-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-300 ease-in-out transform focus:scale-105">
+                                    </div>
+                                    <div class="relative group">
+                                        <label for="marking-scheme-url"
+                                            class="block text-sm font-medium text-gray-300 mb-2 transition-transform group-focus-within:-translate-y-6 group-focus-within:text-indigo-400">
+                                            Marking Scheme URL
+                                        </label>
+                                        <input type="url" name="marking-scheme-url" id="marking-scheme-url"
+                                            class="w-full px-5 py-4 rounded-xl bg-gray-800 text-white border-2 border-gray-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-300 ease-in-out transform focus:scale-105">
+                                    </div>
+                                    <div class="relative group">
+                                        <label for="total-classes"
+                                            class="block text-sm font-medium text-gray-300 mb-2 transition-transform group-focus-within:-translate-y-6 group-focus-within:text-indigo-400">
+                                            Total Classes
+                                        </label>
+                                        <input type="number" name="total-classes" id="total-classes" min="1" max="10"
+                                            class="w-full px-5 py-4 rounded-xl bg-gray-800 text-white border-2 border-gray-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-300 ease-in-out transform focus:scale-105">
+                                    </div>
+                                </div>
+
+                                <div class="space-y-8">
+                                    <div class="relative group">
+                                        <label for="syllabus"
+                                            class="block text-sm font-medium text-gray-300 mb-2 transition-transform group-focus-within:-translate-y-6 group-focus-within:text-indigo-400">
+                                            Syllabus
+                                        </label>
+                                        <textarea id="syllabus" name="syllabus" rows="4"
+                                            class="w-full px-5 py-4 rounded-xl bg-gray-800 text-white border-2 border-gray-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-300 ease-in-out transform focus:scale-105"></textarea>
+                                    </div>
+                                    <div class="relative group">
+                                        <label for="extra-material"
+                                            class="block text-sm font-medium text-gray-300 mb-2 transition-transform group-focus-within:-translate-y-6 group-focus-within:text-indigo-400">
+                                            Extra Study Material
+                                        </label>
+                                        <textarea id="extra-material" name="extra-material" rows="4"
+                                            class="w-full px-5 py-4 rounded-xl bg-gray-800 text-white border-2 border-gray-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-300 ease-in-out transform focus:scale-105"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Exam Description section: Full row -->
+                            <div class="relative group">
+                                <label for="exam-description"
+                                    class="block text-sm font-medium text-gray-300 mb-2 transition-transform group-focus-within:-translate-y-6 group-focus-within:text-indigo-400">
+                                    Exam Description
+                                </label>
+                                <textarea id="exam-description" name="exam-description" rows="4"
+                                    class="w-full px-5 py-4 rounded-xl bg-gray-800 text-white border-2 border-gray-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-300 ease-in-out transform focus:scale-105"></textarea>
+                            </div>
+
+                            <!-- Submit button -->
+                            <div class="pt-6">
+                                <button type="submit"
+                                    class="w-full py-4 px-6 text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 rounded-xl text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg hover:shadow-xl">
+                                    Save Course Setup
+                                </button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </main>
+            <style>
+                @keyframes gradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+
+                    50% {
+                        background-position: 100% 50%;
+                    }
+
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+
+                .bg-gradient-to-br {
+                    background-size: 200% 200%;
+                    animation: gradient 15s ease infinite;
+                }
+
+                .group:focus-within label {
+                    transform: translateY(-1.5rem) scale(0.85);
+                    color: #818cf8;
+                }
+
+                @keyframes gradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+
+                    50% {
+                        background-position: 100% 50%;
+                    }
+
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+
+                .bg-gradient-to-br {
+                    background-size: 200% 200%;
+                    animation: gradient 15s ease infinite;
+                }
+
+                .group:focus-within label {
+                    transform: translateY(-1.5rem) scale(0.85);
+                    color: #818cf8;
+                }
+
+                /* New styles for select options */
+                #ai-model option {
+                    white-space: pre-wrap;
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            </style>
+
+            <script>
+                document.querySelectorAll('input, textarea, select').forEach(element => {
+                    element.addEventListener('focus', () => {
+                        element.closest('.group').querySelector('label').classList.add('text-indigo-400', '-translate-y-6');
+                    });
+                    element.addEventListener('blur', () => {
+                        if (element.value === '') {
+                            element.closest('.group').querySelector('label').classList.remove('text-indigo-400', '-translate-y-6');
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <script>
+        const profilePic = document.getElementById('profile-pic');
+        const profileDropdown = document.getElementById('profile-dropdown');
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuItems = document.getElementById('menu-items');
+
+        profilePic.addEventListener('click', () => {
+            profileDropdown.classList.toggle('hidden');
+        });
+
+        menuToggle.addEventListener('click', () => {
+            menuItems.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!profilePic.contains(event.target) && !profileDropdown.contains(event.target)) {
+                profileDropdown.classList.add('hidden');
+            }
+        });
+        document.querySelectorAll('input, textarea, select').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.closest('.group').querySelector('label').classList.add('text-indigo-400', '-translate-y-6');
+            });
+            element.addEventListener('blur', () => {
+                if (element.value === '') {
+                    element.closest('.group').querySelector('label').classList.remove('text-indigo-400', '-translate-y-6');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
